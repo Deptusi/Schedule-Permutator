@@ -1,0 +1,25 @@
+#:kivy 2.1.0
+<logoLayout>:
+    size_hint_y: None
+    height      : 35
+    canvas.before:
+        Color:
+            rgba: 0.0, 0.17254901960784313, 0.4666666666666667, 1.0
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y: 'top'
+        BoxLayout:
+            size_hint: 0.1,1
+            orientation: 'horizontal'
+            Image:
+                source: 'supportFiles\\Flag_of_Venezuela.png'
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y:'top'
+        Label:
+            size: self.size
+            text: 'SchedulePermutator app'
+            bold: True
