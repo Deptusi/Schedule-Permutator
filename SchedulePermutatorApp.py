@@ -262,7 +262,9 @@ class subjectsGrid(ScrollView):
         except:
             pass
         self.layout.add_widget(self.subjectAddBTN)
-    def addSubjetRow(self,instance=None,subject=subjectRow()):
+    def addSubjetRow(self,instance=None,subject=None):
+        if subject==None:
+            subject=subjectRow()
         self.layout.add_widget(subject)
         self.placeSubjectAddButton()
     
