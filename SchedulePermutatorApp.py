@@ -1,5 +1,4 @@
 import os,pandas,warnings,tempfile,json,re,PIL.Image
-from alive_progress import alive_bar
 warnings.filterwarnings(action='ignore')
 
 from kivy.app                                   import App
@@ -410,6 +409,7 @@ class ExecuteRow(BoxLayout):
 class fileSelector(Popup):
     def __init__(self,callerFunction, **kwargs):
         super().__init__(**kwargs)
+        self.title="Select file"
 
         self.calledFunction=callerFunction
 
@@ -437,6 +437,7 @@ class fileSaver(Popup):
     def __init__(self,callerFunction,filters:list[str], **kwargs):
         super().__init__(**kwargs)
         self.calledFunction=callerFunction
+        self.title="Save file"
 
         self.Box=BoxLayout(orientation='vertical')
         self.add_widget(self.Box)
